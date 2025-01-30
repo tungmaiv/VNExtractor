@@ -1,8 +1,5 @@
-Flask
-py-vncorenlp
-Werkzeug
-gunicorn
-python-dotenv
-python-doc
-pdfplumber
-PyPDF2
+flask==2.3.3
+py-vncorenlp==1.0.3
+python-docx==0.8.11
+PyPDF2==3.0.1
+python-dotenv==1.0.0
