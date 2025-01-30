@@ -26,7 +26,6 @@ RUN mkdir -p /app/logs
 
 # Set environment variables
 ENV PYTHONUNBUFFERED=1 \
-    VNCORENLP_PATH=/app/vncorenlp \
     FLASK_APP=text_segmentation/app.py
 
 # Expose port
