@@ -36,10 +36,21 @@ class SegmentationService:
 
     @staticmethod
     def _extract_sentences(annotated_result):
-        # Implement sentence extraction logic
-        pass
+        # Extract sentences from the annotated data with error handling. 
+        # :param annotated_result: Dictionary containing annotated sentence data.
+        # :return: List of sentences (each sentence is a list of words).
+    
+        if not isinstance(annotated_result, dict):
+            raise Exception("Expected a dictionary, but got: " + str(type(annotated_result)))
+    
+        sentences = []
+        for _, sentence in annotated_result.items():  # Iterate through numbered sentences
+            words = [token['wordForm'] for token in sentence]  # Extract 'wordForm' 
+            if words:
+                sentences.append(words)
+        return sentences
 
     @staticmethod
     def _sentences_to_text(sentences):
-        # Implement sentences to text conversion logic
-        pass
+        # Convert the list of sentence words into readable text.
+        return '\n'.join(' '.join(sentence) for sentence in sentences)
