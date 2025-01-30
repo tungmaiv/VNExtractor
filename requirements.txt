@@ -1,0 +1,8 @@
+Flask
+py-vncorenlp
+Werkzeug
+gunicorn
+python-dotenv
+python-doc
+pdfplumber
+PyPDF2
